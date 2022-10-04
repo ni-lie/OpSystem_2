@@ -29,7 +29,6 @@ function makeGameScreen(word: string){
             const arrLetters: string[] = [...guessword];        // list of letters of the guess word
             const arrCorrect: string[] = [... word];            // list of letters of the correc answer
 
-            console.log(arrLetters);
             if(guessword.length !== 5){               // if guess is invalid
                 alert("Input should have exactly five characters!\nYour input has length " + (wordBox.value).length);
             }
@@ -67,7 +66,7 @@ function makeGameScreen(word: string){
 //                     guessWord.classList.add();
 //                     
                     appDiv.appendChild(guessWord);     
-//                     wordBox.value = '';
+                    
 
                     if (guessword === word){                           // if guess is correct        
                         alert("You have guessed the right word!\nThe word to be guessed is " + word);
@@ -83,7 +82,7 @@ function makeGameScreen(word: string){
                     wordBox.disabled = true;
                 }
 
-                
+            wordBox.value = '';
             }
             
         }

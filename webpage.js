@@ -23,7 +23,6 @@ function makeGameScreen(word) {
             const guessword = (wordBox.value).toLowerCase();
             const arrLetters = [...guessword]; // list of letters of the guess word
             const arrCorrect = [...word]; // list of letters of the correc answer
-            console.log(arrLetters);
             if (guessword.length !== 5) { // if guess is invalid
                 alert("Input should have exactly five characters!\nYour input has length " + (wordBox.value).length);
             }
@@ -56,7 +55,6 @@ function makeGameScreen(word) {
                     //                     guessWord.classList.add();
                     //                     
                     appDiv.appendChild(guessWord);
-                    //                     wordBox.value = '';
                     if (guessword === word) { // if guess is correct        
                         alert("You have guessed the right word!\nThe word to be guessed is " + word);
                         wordBox.disabled = true;
@@ -69,6 +67,7 @@ function makeGameScreen(word) {
                     alert("The game is over! You have inputted 6 incorrect guesses!\nThe correct answer is " + word);
                     wordBox.disabled = true;
                 }
+                wordBox.value = '';
             }
         }
     });

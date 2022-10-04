@@ -1,0 +1,17 @@
+.correct {
+    background-color: green;
+    color: white;
+    letter-spacing: 5px;
+  }
+  
+  .misplaced {
+    background-color: darkgoldenrod;
+    color: white;
+    letter-spacing: 5px;
+  }
+
+  .incorrect{
+    background-color: black;
+    color: white;
+    letter-spacing: 5px;
+  }
